@@ -6,15 +6,17 @@ import BookmarkList from './BookmarkList/BookmarkList';
 import Nav from './Nav/Nav';
 import config from './config';
 import './App.css';
+import Rating from './Rating/Rating'
 
 
+//console.log(BookmarksContext.Provider)
 class App extends Component {
-  
+ 
   state = {
     bookmarks: [],
     error: null,
   };
-  
+
   setBookmarks = bookmarks => {
     this.setState({
       bookmarks,
@@ -56,18 +58,20 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.deleteBookmark)
+   // console.log(this.deleteBookmark)
     const contextValue = {
       bookmarks: this.state.bookmarks,
       addBookmark: this.addBookmark,
-      deleteBookmark: this.deleteBookmark,
+      deleteBookmark: BookmarksContext.Provider._currentValue,
     }
     
     return (
       <main className='App'>
         <h1>Bookmarks!</h1>
+        
         <BookmarksContext.Provider value={contextValue}>
           <Nav />
+          <Rating value="hello"/>
           <div className='content' aria-live='polite'>
             <Route
               path='/add-bookmark'
@@ -79,6 +83,7 @@ class App extends Component {
               component={BookmarkList}
             />
           </div>
+          
         </BookmarksContext.Provider>
       </main>
     );

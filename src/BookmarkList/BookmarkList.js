@@ -13,8 +13,8 @@ class BookmarkList extends Component {
   render() {
     
     const { bookmarks } = this.context
-    console.log({bookmarks})
-    console.log(this)
+    //console.log({bookmarks})
+    //console.log(this)
     return (
       <section className='BookmarkList'>
         <h2>Your bookmarks</h2>
