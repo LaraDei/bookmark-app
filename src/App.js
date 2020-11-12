@@ -62,7 +62,7 @@ class App extends Component {
     const contextValue = {
       bookmarks: this.state.bookmarks,
       addBookmark: this.addBookmark,
-      deleteBookmark: BookmarksContext.Provider._currentValue,
+      onClickDelete: this.deleteBookmark,
     }
     
     return (

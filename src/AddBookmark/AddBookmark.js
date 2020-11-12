@@ -14,6 +14,12 @@ class AddBookmark extends Component {
     error: null,
   };
 
+  static defaultProps = {
+    history: {
+      push: () => {}
+    },
+}
+
   handleSubmit = e => {
     e.preventDefault()
     // get the form fields from the event
