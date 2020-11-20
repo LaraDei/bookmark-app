@@ -71,7 +71,7 @@ class App extends Component {
         
         <BookmarksContext.Provider value={contextValue}>
           <Nav />
-          <Rating value="hello"/>
+
           <div className='content' aria-live='polite'>
             <Route
               path='/add-bookmark'
