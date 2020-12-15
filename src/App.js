@@ -72,7 +72,7 @@ class App extends Component {
       bookmarks: this.state.bookmarks,
       addBookmark: this.addBookmark,
       onClickDelete: this.deleteBookmark,
-      onClickEdit: this.editBookmark
+      editBookmark: this.editBookmark
     }
     
     return (

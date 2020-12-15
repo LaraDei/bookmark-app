@@ -26,7 +26,12 @@
   color: #b00c0c;
 }
 
-.BookmarkItem__buttons {
-  font-size: .8em;
+.BookmarkItem__buttons  {
   text-align: right;
+  color: black;
+}
+
+.Bookmark-button a{
+  text-decoration: none;
+  color: black;
 }
