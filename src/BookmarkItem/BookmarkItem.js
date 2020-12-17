@@ -74,8 +74,8 @@ export default function BookmarkItem(props) {
 
 
 BookmarkItem.propTypes = {
-  title: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  url: PropTypes.string,
   rating: PropTypes.number,
   description: PropTypes.string
 };
